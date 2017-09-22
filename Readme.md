@@ -24,11 +24,12 @@ Nakon toga u backend folderu pokrenuti npm start i istovremeno u drugom terminal
 
 Pokretanjem npm start u forntendu angular app ce se buildati u folder src/backend/public i ako odete na http://localhost:3030 trebali bi da vidite aplikaciju koju ce te da razvijate.
 
-###Kada zavrsite zadatak napravite [pull request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/)
-
 ### U samoj aplikaciji se nalazi detaljno uputstvo za rad i konkretne zadatke
 ### Aplikacija izgleda [ovako](https://www.useloom.com/embed/5dba84157803432f9e67f9402f214593)
 ### Sva pitanja :question: i probleme :thought_balloon: pisite kao issue na ovaj repo.
-### Rok je 29.09.2017 23:59
 
-## Mnogo srece :four_leaf_clover: i zabave :smile: tokom rada.  
+## Kada zavrsite zadatak napravite [pull request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/)
+
+## Rok je 29.09.2017 23:59
+
+# Mnogo srece :four_leaf_clover: i zabave :smile: tokom rada.  
