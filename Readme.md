@@ -17,14 +17,13 @@ Individualni zadaci
 2. Uvezivanje apija sa UI komponentom
 
 
-Izvorni kod za backend se nalazi u src/backend a za forntend u src/frontend folderu.
+Izvorni kod za backend se nalazi u **src/backend** a za forntend u **src/frontend** folderu.
 
-Nakon sto forkate ovaj repo i preuzmete kod na "razvojnu masinu" potrebno je u ona foldera izvrsiti komande npm install. 
-Nakon toga u backend folderu pokrenuti npm start i istovremeno u drugom terminalu (ili command prompt-u) u folderu frontend pokrenuti npm start.
+Nakon sto forkate ovaj repo i preuzmete kod na "razvojnu masinu" potrebno je u oba foldera izvrsiti komandu ```npm install```. Nakon toga u backend folderu izvrsiti komandu ```npm start``` i istovremeno u drugom terminalu (ili command prompt-u) u folderu frontend takodjer izvrsiti komandu ```npm start```.
 
-Pokretanjem npm start u forntendu angular app ce se buildati u folder src/backend/public i ako odete na http://localhost:3030 trebali bi da vidite aplikaciju koju ce te da razvijate.
+Pokretanjem ```npm start``` u frontend folderu, angular app ce se build-ati u folderu **src/backend/public** i ako odete na **http://localhost:3030** trebali bi da vidite aplikaciju na kojoj ce te da radite zadatke.
 
-### U samoj aplikaciji se nalazi detaljno uputstvo za rad i konkretne zadatke
+### U samoj aplikaciji se nalazi detaljno uputstvo za rad i konkretne zadatke :eyes:
 ### Aplikacija izgleda [ovako](https://www.useloom.com/embed/5dba84157803432f9e67f9402f214593)
 ### Sva pitanja :question: i probleme :thought_balloon: pisite kao issue na ovaj repo.
 
