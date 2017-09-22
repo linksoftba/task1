@@ -2,11 +2,11 @@
 
 Aplikacija dashbord se sastoji od forntend i backend dijela
 
-Frontend je inicijalno [CoreUI Dashboard starter] (https://github.com/mrholek/CoreUI-Angular/tree/master/Angular4_CLI_Starter)
+Frontend je inicijalno [CoreUI Dashboard starter](https://github.com/mrholek/CoreUI-Angular/tree/master/Angular4_CLI_Starter)
 
 Backend je REST API koji se kreira sa [feathersjs](https://feathersjs.com/) i treba treba da koristi MySql bazu za persistenciju podataka.
 
-## Zadaci se sastoje od:
+### Zadaci se sastoje od:
 
 Zajednicki dio
 1. Dizajnirati layout dashboard-a.
@@ -24,9 +24,11 @@ Nakon toga u backend folderu pokrenuti npm start i istovremeno u drugom terminal
 
 Pokretanjem npm start u forntendu angular app ce se buildati u folder src/backend/public i ako odete na http://localhost:3030 trebali bi da vidite aplikaciju koju ce te da razvijate.
 
-## U samoj aplikaciji se nalazi detaljno uputstvo za rad i konkretne zadatke
-<iframe width="630" height="345" src="https://www.useloom.com/embed/81ba6d91175848c4b121caafc154ea86" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+###Kada zavrsite zadatak napravite [pull request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/)
 
-## Sva pitanja :question: i probleme :thought_balloon: pisite kao issue na ovaj repo.
+### U samoj aplikaciji se nalazi detaljno uputstvo za rad i konkretne zadatke
+### Aplikacija izgleda [ovako](https://www.useloom.com/embed/5dba84157803432f9e67f9402f214593)
+### Sva pitanja :question: i probleme :thought_balloon: pisite kao issue na ovaj repo.
+### Rok je 29.09.2017 23:59
 
-Mnogo srece :four_leaf_clover: i zabave :smile: tokom rada.  
+## Mnogo srece :four_leaf_clover: i zabave :smile: tokom rada.  
