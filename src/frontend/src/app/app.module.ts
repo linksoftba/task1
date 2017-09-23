@@ -24,7 +24,14 @@ import {
   AppSidebar,
   AppSidebarFooter,
   AppSidebarForm,
-  AppSidebarHeader
+  AppSidebarHeader,
+  AboutCompanyComponent,
+  AboutUserComponent,
+  ActiveUsersChatComponent,
+  CalendarComponent,
+  ClockComponent,
+  CompanyNewsComponent,
+  TaskComponent
 } from './components';
 
 const APP_COMPONENTS = [
