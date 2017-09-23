@@ -1,0 +1,6 @@
+.wrapper {
+    width: inherit;
+    height: 40%;
+    border: 1px solid black;
+    background-color: white;
+}
