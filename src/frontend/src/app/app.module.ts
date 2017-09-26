@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
+import { EventsService } from './services/events.service';
 
 // Import containers
 import {
@@ -24,14 +25,7 @@ import {
   AppSidebar,
   AppSidebarFooter,
   AppSidebarForm,
-  AppSidebarHeader,
-  AboutCompanyComponent,
-  AboutUserComponent,
-  ActiveUsersChatComponent,
-  CalendarComponent,
-  ClockComponent,
-  CompanyNewsComponent,
-  TaskComponent
+  AppSidebarHeader
 } from './components';
 
 const APP_COMPONENTS = [
@@ -80,7 +74,7 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     ...APP_COMPONENTS,
     ...APP_DIRECTIVES
   ],
-  providers: [{
+  providers: [ EventsService, {
     provide: LocationStrategy,
     useClass: HashLocationStrategy
   }],
