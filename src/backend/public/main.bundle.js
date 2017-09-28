@@ -11,13 +11,16 @@ var map = {
 	"./views/instructions/instructions.module": [
 		"../../../../../src/app/views/instructions/instructions.module.ts",
 		"instructions.module"
+	],
+	"./views/linkos-calendar/calendar.module": [
+		"../../../../../src/app/views/linkos-calendar/calendar.module.ts"
 	]
 };
 function webpackAsyncContext(req) {
 	var ids = map[req];
 	if(!ids)
 		return Promise.reject(new Error("Cannot find module '" + req + "'."));
-	return __webpack_require__.e(ids[1]).then(function() {
+	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
 		return __webpack_require__(ids[0]);
 	});
 };
@@ -64,19 +67,20 @@ var AppComponent = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_events_service__ = __webpack_require__("../../../../../src/app/services/events.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__containers__ = __webpack_require__("../../../../../src/app/containers/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components__ = __webpack_require__("../../../../../src/app/components/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directives__ = __webpack_require__("../../../../../src/app/directives/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_routing__ = __webpack_require__("../../../../../src/app/app.routing.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ngx_bootstrap_dropdown__ = __webpack_require__("../../../../ngx-bootstrap/dropdown/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ngx_bootstrap_tabs__ = __webpack_require__("../../../../ngx-bootstrap/tabs/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ng2_charts_ng2_charts__ = __webpack_require__("../../../../ng2-charts/ng2-charts.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ng2_charts_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_ng2_charts_ng2_charts__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__views_linkos_calendar_calendar_module__ = __webpack_require__("../../../../../src/app/views/linkos-calendar/calendar.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__containers__ = __webpack_require__("../../../../../src/app/containers/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components__ = __webpack_require__("../../../../../src/app/components/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__directives__ = __webpack_require__("../../../../../src/app/directives/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_routing__ = __webpack_require__("../../../../../src/app/app.routing.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ngx_bootstrap_dropdown__ = __webpack_require__("../../../../ngx-bootstrap/dropdown/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ngx_bootstrap_tabs__ = __webpack_require__("../../../../ngx-bootstrap/tabs/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_ng2_charts_ng2_charts__ = __webpack_require__("../../../../ng2-charts/ng2-charts.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_ng2_charts_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_ng2_charts_ng2_charts__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -88,30 +92,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 // Import containers
 
 var APP_CONTAINERS = [
-    __WEBPACK_IMPORTED_MODULE_5__containers__["a" /* FullLayout */],
-    __WEBPACK_IMPORTED_MODULE_5__containers__["b" /* SimpleLayout */]
+    __WEBPACK_IMPORTED_MODULE_6__containers__["a" /* FullLayout */],
+    __WEBPACK_IMPORTED_MODULE_6__containers__["b" /* SimpleLayout */]
 ];
 // Import components
 
 var APP_COMPONENTS = [
-    __WEBPACK_IMPORTED_MODULE_6__components__["a" /* AppAside */],
-    __WEBPACK_IMPORTED_MODULE_6__components__["b" /* AppBreadcrumbs */],
-    __WEBPACK_IMPORTED_MODULE_6__components__["c" /* AppFooter */],
-    __WEBPACK_IMPORTED_MODULE_6__components__["d" /* AppHeader */],
-    __WEBPACK_IMPORTED_MODULE_6__components__["e" /* AppSidebar */],
-    __WEBPACK_IMPORTED_MODULE_6__components__["f" /* AppSidebarFooter */],
-    __WEBPACK_IMPORTED_MODULE_6__components__["g" /* AppSidebarForm */],
-    __WEBPACK_IMPORTED_MODULE_6__components__["h" /* AppSidebarHeader */]
+    __WEBPACK_IMPORTED_MODULE_7__components__["a" /* AppAside */],
+    __WEBPACK_IMPORTED_MODULE_7__components__["b" /* AppBreadcrumbs */],
+    __WEBPACK_IMPORTED_MODULE_7__components__["c" /* AppFooter */],
+    __WEBPACK_IMPORTED_MODULE_7__components__["d" /* AppHeader */],
+    __WEBPACK_IMPORTED_MODULE_7__components__["e" /* AppSidebar */],
+    __WEBPACK_IMPORTED_MODULE_7__components__["f" /* AppSidebarFooter */],
+    __WEBPACK_IMPORTED_MODULE_7__components__["g" /* AppSidebarForm */],
+    __WEBPACK_IMPORTED_MODULE_7__components__["h" /* AppSidebarHeader */]
 ];
 // Import directives
 
 var APP_DIRECTIVES = [
-    __WEBPACK_IMPORTED_MODULE_7__directives__["a" /* AsideToggleDirective */],
-    __WEBPACK_IMPORTED_MODULE_7__directives__["b" /* NAV_DROPDOWN_DIRECTIVES */],
-    __WEBPACK_IMPORTED_MODULE_7__directives__["c" /* SIDEBAR_TOGGLE_DIRECTIVES */]
+    __WEBPACK_IMPORTED_MODULE_8__directives__["a" /* AsideToggleDirective */],
+    __WEBPACK_IMPORTED_MODULE_8__directives__["b" /* NAV_DROPDOWN_DIRECTIVES */],
+    __WEBPACK_IMPORTED_MODULE_8__directives__["c" /* SIDEBAR_TOGGLE_DIRECTIVES */]
 ];
 // Import routing module
 
@@ -125,11 +130,12 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
             imports: [
-                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_8__app_routing__["a" /* AppRoutingModule */],
-                __WEBPACK_IMPORTED_MODULE_9_ngx_bootstrap_dropdown__["a" /* BsDropdownModule */].forRoot(),
-                __WEBPACK_IMPORTED_MODULE_10_ngx_bootstrap_tabs__["a" /* TabsModule */].forRoot(),
-                __WEBPACK_IMPORTED_MODULE_11_ng2_charts_ng2_charts__["ChartsModule"]
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+                __WEBPACK_IMPORTED_MODULE_9__app_routing__["a" /* AppRoutingModule */],
+                __WEBPACK_IMPORTED_MODULE_10_ngx_bootstrap_dropdown__["a" /* BsDropdownModule */].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_11_ngx_bootstrap_tabs__["a" /* TabsModule */].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_12_ng2_charts_ng2_charts__["ChartsModule"],
+                __WEBPACK_IMPORTED_MODULE_5__views_linkos_calendar_calendar_module__["LinkosCalendarModule"],
             ],
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]
@@ -156,13 +162,15 @@ var AppModule = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__containers__ = __webpack_require__("../../../../../src/app/containers/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__views_linkos_calendar_calendar_component__ = __webpack_require__("../../../../../src/app/views/linkos-calendar/calendar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__containers__ = __webpack_require__("../../../../../src/app/containers/index.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 // Import Containers
@@ -175,7 +183,7 @@ var routes = [
     },
     {
         path: '',
-        component: __WEBPACK_IMPORTED_MODULE_2__containers__["a" /* FullLayout */],
+        component: __WEBPACK_IMPORTED_MODULE_3__containers__["a" /* FullLayout */],
         data: {
             title: 'Home'
         },
@@ -187,6 +195,11 @@ var routes = [
             {
                 path: 'instructions',
                 loadChildren: './views/instructions/instructions.module#InstructionsModule'
+            },
+            {
+                path: 'calendar',
+                component: __WEBPACK_IMPORTED_MODULE_2__views_linkos_calendar_calendar_component__["a" /* LinkosCalendarComponent */],
+                loadChildren: './views/linkos-calendar/calendar.module#LinkosCalendarModule'
             }
         ]
     }
@@ -660,7 +673,7 @@ var AppSidebarHeader = /** @class */ (function () {
 /***/ "../../../../../src/app/components/app-sidebar/app-sidebar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"sidebar\">\r\n  <app-sidebar-header></app-sidebar-header>\r\n  <app-sidebar-form></app-sidebar-form>\r\n  <nav class=\"sidebar-nav\">\r\n    <ul class=\"nav\">\r\n      <li class=\"nav-title\">\r\n        Dashboard\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/dashboard']\">\r\n          <i class=\"icon-speedometer\"></i> \r\n          Dashboard</a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/instructions']\">\r\n            <i class=\"fa fa-hand-spock-o\"></i>\r\n             Uputstvo\r\n            </a>\r\n      </li>\r\n    </ul>\r\n  </nav>\r\n  <app-sidebar-footer></app-sidebar-footer>\r\n</div>\r\n"
+module.exports = "<div class=\"sidebar\">\r\n  <app-sidebar-header></app-sidebar-header>\r\n  <app-sidebar-form></app-sidebar-form>\r\n  <nav class=\"sidebar-nav\">\r\n    <ul class=\"nav\">\r\n      <li class=\"nav-title\">\r\n        Dashboard\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/dashboard']\">\r\n          <i class=\"icon-speedometer\"></i> \r\n          Dashboard</a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/instructions']\">\r\n            <i class=\"fa fa-hand-spock-o\"></i>\r\n             Uputstvo\r\n            </a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/calendar']\">\r\n            <i class=\"fa fa-hand-spock-o\"></i>\r\n             Kalendar\r\n            </a>\r\n      </li>\r\n    </ul>\r\n  </nav>\r\n  <app-sidebar-footer></app-sidebar-footer>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -746,15 +759,12 @@ var AppSidebar = /** @class */ (function () {
 /* unused harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__linkos_active_users_chat__ = __webpack_require__("../../../../../src/app/components/linkos-active-users-chat/index.ts");
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__linkos_calendar__ = __webpack_require__("../../../../../src/app/components/linkos-calendar/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__linkos_clock__ = __webpack_require__("../../../../../src/app/components/linkos-clock/index.ts");
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__linkos_clock__ = __webpack_require__("../../../../../src/app/components/linkos-clock/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__linkos_company_news__ = __webpack_require__("../../../../../src/app/components/linkos-company-news/index.ts");
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__linkos_company_news__ = __webpack_require__("../../../../../src/app/components/linkos-company-news/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__linkos_task__ = __webpack_require__("../../../../../src/app/components/linkos-task/index.ts");
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__linkos_task__ = __webpack_require__("../../../../../src/app/components/linkos-task/index.ts");
-/* unused harmony namespace reexport */
-
 
 
 
@@ -983,90 +993,6 @@ var ActiveUsersChatComponent = /** @class */ (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__active_users_chat_component__ = __webpack_require__("../../../../../src/app/components/linkos-active-users-chat/active-users-chat.component.ts");
-/* unused harmony namespace reexport */
-
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/linkos-calendar/calendar.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".wrapper {\r\n    width: inherit;\r\n    height: 40%;\r\n    border: 1px solid black;\r\n    margin-bottom: 2%;\r\n    background-color: white;\r\n}", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/linkos-calendar/calendar.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"wrapper\">\r\n    <p>CALENDAR</p>\r\n    <button (click)=\"getEvents()\">GET EVENTS</button>\r\n</div>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/linkos-calendar/calendar.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LinkosCalendarComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_events_service__ = __webpack_require__("../../../../../src/app/services/events.service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var LinkosCalendarComponent = /** @class */ (function () {
-    function LinkosCalendarComponent(eventsService) {
-        this.eventsService = eventsService;
-    }
-    LinkosCalendarComponent.prototype.ngOnInit = function () {
-    };
-    LinkosCalendarComponent.prototype.getEvents = function () {
-        var _this = this;
-        this.eventsService.requestEvents().subscribe(function (res) {
-            _this.events = res.data;
-            alert(JSON.stringify(_this.events));
-        });
-    };
-    LinkosCalendarComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'calendar',
-            providers: [__WEBPACK_IMPORTED_MODULE_1__services_events_service__["a" /* EventsService */]],
-            template: __webpack_require__("../../../../../src/app/components/linkos-calendar/calendar.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/components/linkos-calendar/calendar.component.css")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_events_service__["a" /* EventsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_events_service__["a" /* EventsService */]) === "function" && _a || Object])
-    ], LinkosCalendarComponent);
-    return LinkosCalendarComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=calendar.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/linkos-calendar/index.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__calendar_component__ = __webpack_require__("../../../../../src/app/components/linkos-calendar/calendar.component.ts");
 /* unused harmony namespace reexport */
 
 //# sourceMappingURL=index.js.map
@@ -1755,6 +1681,206 @@ var EventsService = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=events.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/views/linkos-calendar/calendar-routing.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarRoutingModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__calendar_component__ = __webpack_require__("../../../../../src/app/views/linkos-calendar/calendar.component.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var routes = [
+    {
+        path: '',
+        component: __WEBPACK_IMPORTED_MODULE_2__calendar_component__["a" /* LinkosCalendarComponent */],
+        data: {
+            title: 'Calendar'
+        }
+    }
+];
+var CalendarRoutingModule = /** @class */ (function () {
+    function CalendarRoutingModule() {
+    }
+    CalendarRoutingModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            imports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* RouterModule */].forChild(routes)],
+            exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* RouterModule */]]
+        })
+    ], CalendarRoutingModule);
+    return CalendarRoutingModule;
+}());
+
+//# sourceMappingURL=calendar-routing.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/views/linkos-calendar/calendar.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".wrapper {\r\n    width: inherit;\r\n    height: 100%;\r\n    border: 1px solid black;\r\n    margin-bottom: 2%;\r\n    background-color: white;\r\n    padding:5px;\r\n}\r\n\r\n.btns {\r\n    display:-webkit-box;\r\n    display:-ms-flexbox;\r\n    display:flex;\r\n    -webkit-box-pack:center;\r\n        -ms-flex-pack:center;\r\n            justify-content:center;\r\n    -webkit-box-align:center;\r\n        -ms-flex-align:center;\r\n            align-items:center;\r\n    margin-top:10px;\r\n    margin-bottom: 10px;\r\n}\r\n\r\ndiv {\r\n    font-size: 20px;\r\n}\r\n\r\nh1 {\r\n    float: middle;\r\n    text-align: center;\r\n    margin-bottom: 15px;\r\n}\r\n\r\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/views/linkos-calendar/calendar.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"wrapper\">\r\n    <div class=\"btn-group btns\">\r\n        <div class=\"btn btn-primary\" mwlCalendarPreviousView [view]=\"view\" [(viewDate)]=\"viewDate\" (viewDateChange)=\"viewDateChange.next(viewDate)\">\r\n            <i class=\"fa fa-chevron-left\" aria-hidden=\"true\"></i>\r\n        </div>\r\n        <div class=\"btn btn-outline-secondary\" mwlCalendarToday [(viewDate)]=\"viewDate\" (viewDateChange)=\"viewDateChange.next(viewDate)\">\r\n            Danas\r\n        </div>\r\n        <div class=\"btn btn-primary\" mwlCalendarNextView [view]=\"view\" [(viewDate)]=\"viewDate\" (viewDateChange)=\"viewDateChange.next(viewDate)\">\r\n            <i class=\"fa fa-chevron-right\" aria-hidden=\"true\"></i>\r\n        </div>\r\n    </div>\r\n    <h1>{{ viewDate | calendarDate:(view + 'ViewTitle'):locale }}</h1>\r\n    <mwl-calendar-month-view [viewDate]=\"viewDate\" [events]=\"events\" [locale]=\"locale\" [weekStartsOn]=\"weekStartsOn\" [weekendDays]=\"weekendDays\"\r\n        [activeDayIsOpen]=\"activeDayIsOpen\" (dayClicked)=\"dayClicked($event.day)\"></mwl-calendar-month-view>\r\n\r\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/views/linkos-calendar/calendar.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LinkosCalendarComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_events_service__ = __webpack_require__("../../../../../src/app/services/events.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular_calendar__ = __webpack_require__("../../../../angular-calendar/dist/esm/src/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_date_fns__ = __webpack_require__("../../../../date-fns/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_date_fns___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_date_fns__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var LinkosCalendarComponent = /** @class */ (function () {
+    function LinkosCalendarComponent(eventsService) {
+        this.eventsService = eventsService;
+        this.view = 'month';
+        this.viewDate = new Date();
+        this.items = [];
+        this.locale = 'bs';
+        this.weekStartsOn = __WEBPACK_IMPORTED_MODULE_2_angular_calendar__["b" /* DAYS_OF_WEEK */].MONDAY;
+        this.weekendDays = [__WEBPACK_IMPORTED_MODULE_2_angular_calendar__["b" /* DAYS_OF_WEEK */].FRIDAY, __WEBPACK_IMPORTED_MODULE_2_angular_calendar__["b" /* DAYS_OF_WEEK */].SATURDAY];
+        this.activeDayIsOpen = false;
+    }
+    LinkosCalendarComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.eventsService.requestEvents().subscribe(function (res) {
+            for (var i = 0; i < res.data.length; i++) {
+                _this.items.push({
+                    title: res.data[i].name,
+                    start: new Date(res.data[i].date),
+                    color: { primary: '#e3bc08', secondary: '#FDF1BA' },
+                    meta: {
+                        time: res.data[i].date
+                    }
+                });
+                _this.events = _this.items;
+            }
+        });
+    };
+    LinkosCalendarComponent.prototype.dayClicked = function (_a) {
+        var date = _a.date, events = _a.events;
+        if (Object(__WEBPACK_IMPORTED_MODULE_3_date_fns__["isSameMonth"])(date, this.viewDate)) {
+            if ((Object(__WEBPACK_IMPORTED_MODULE_3_date_fns__["isSameDay"])(this.viewDate, date) && this.activeDayIsOpen === true) ||
+                events.length === 0) {
+                this.activeDayIsOpen = false;
+            }
+            else {
+                this.activeDayIsOpen = true;
+                this.viewDate = date;
+            }
+        }
+    };
+    LinkosCalendarComponent.prototype.getEvents = function () {
+        var _this = this;
+        this.eventsService.requestEvents().subscribe(function (res) {
+            _this.events = res.data;
+            alert(JSON.stringify(_this.events));
+        });
+    };
+    LinkosCalendarComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'calendar',
+            providers: [__WEBPACK_IMPORTED_MODULE_1__services_events_service__["a" /* EventsService */]],
+            template: __webpack_require__("../../../../../src/app/views/linkos-calendar/calendar.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/views/linkos-calendar/calendar.component.css")]
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_events_service__["a" /* EventsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_events_service__["a" /* EventsService */]) === "function" && _a || Object])
+    ], LinkosCalendarComponent);
+    return LinkosCalendarComponent;
+    var _a;
+}());
+
+//# sourceMappingURL=calendar.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/views/linkos-calendar/calendar.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LinkosCalendarModule", function() { return LinkosCalendarModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_charts_ng2_charts__ = __webpack_require__("../../../../ng2-charts/ng2-charts.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_charts_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_ng2_charts_ng2_charts__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular_calendar__ = __webpack_require__("../../../../angular-calendar/dist/esm/src/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__calendar_component__ = __webpack_require__("../../../../../src/app/views/linkos-calendar/calendar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__calendar_routing_module__ = __webpack_require__("../../../../../src/app/views/linkos-calendar/calendar-routing.module.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+var LinkosCalendarModule = /** @class */ (function () {
+    function LinkosCalendarModule() {
+    }
+    LinkosCalendarModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_2__angular_http__["c" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ng2_charts_ng2_charts__["ChartsModule"],
+                __WEBPACK_IMPORTED_MODULE_5__calendar_routing_module__["a" /* CalendarRoutingModule */],
+                __WEBPACK_IMPORTED_MODULE_3_angular_calendar__["a" /* CalendarModule */].forRoot()
+            ],
+            declarations: [__WEBPACK_IMPORTED_MODULE_4__calendar_component__["a" /* LinkosCalendarComponent */]]
+        })
+    ], LinkosCalendarModule);
+    return LinkosCalendarModule;
+}());
+
+//# sourceMappingURL=calendar.module.js.map
 
 /***/ }),
 

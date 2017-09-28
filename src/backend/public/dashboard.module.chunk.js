@@ -63,7 +63,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/views/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"animated fadeIn wrapper\">\r\n  <div class=\"col-md-3 col\">\r\n    <about-company></about-company>\r\n    <about-user></about-user>\r\n    <active-users-chat></active-users-chat>\r\n  </div>\r\n  <div class=\"col-md-6 col\">\r\n    <company-news></company-news>\r\n  </div>\r\n  <div class=\"col-md-3 col\">\r\n    <clock></clock>\r\n    <calendar></calendar>\r\n    <task></task>\r\n  </div>\r\n\r\n</div>"
+module.exports = "<div class=\"animated fadeIn wrapper\">\r\n  <div class=\"col-md-3 col\">\r\n    <about-company></about-company>\r\n    <about-user></about-user>\r\n    <active-users-chat></active-users-chat>\r\n  </div>\r\n  <div class=\"col-md-6 col\">\r\n    <company-news></company-news>\r\n  </div>\r\n  <div class=\"col-md-3 col\">\r\n    <clock></clock>\r\n    <task></task>\r\n  </div>\r\n\r\n</div>"
 
 /***/ }),
 
@@ -114,11 +114,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_linkos_about_company_about_company_component__ = __webpack_require__("../../../../../src/app/components/linkos-about-company/about-company.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_linkos_about_user_about_user_component__ = __webpack_require__("../../../../../src/app/components/linkos-about-user/about-user.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_linkos_active_users_chat_active_users_chat_component__ = __webpack_require__("../../../../../src/app/components/linkos-active-users-chat/active-users-chat.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_linkos_calendar_calendar_component__ = __webpack_require__("../../../../../src/app/components/linkos-calendar/calendar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_linkos_clock_clock_component__ = __webpack_require__("../../../../../src/app/components/linkos-clock/clock.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_linkos_company_news_company_news_component__ = __webpack_require__("../../../../../src/app/components/linkos-company-news/company-news.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_linkos_task_task_component__ = __webpack_require__("../../../../../src/app/components/linkos-task/task.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__dashboard_routing_module__ = __webpack_require__("../../../../../src/app/views/dashboard/dashboard-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_linkos_clock_clock_component__ = __webpack_require__("../../../../../src/app/components/linkos-clock/clock.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_linkos_company_news_company_news_component__ = __webpack_require__("../../../../../src/app/components/linkos-company-news/company-news.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_linkos_task_task_component__ = __webpack_require__("../../../../../src/app/components/linkos-task/task.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__dashboard_routing_module__ = __webpack_require__("../../../../../src/app/views/dashboard/dashboard-routing.module.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -136,14 +135,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
 var DashboardModule = /** @class */ (function () {
     function DashboardModule() {
     }
     DashboardModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             imports: [
-                __WEBPACK_IMPORTED_MODULE_11__dashboard_routing_module__["a" /* DashboardRoutingModule */],
+                __WEBPACK_IMPORTED_MODULE_10__dashboard_routing_module__["a" /* DashboardRoutingModule */],
                 __WEBPACK_IMPORTED_MODULE_1_ng2_charts_ng2_charts__["ChartsModule"],
                 __WEBPACK_IMPORTED_MODULE_2__angular_http__["c" /* HttpModule */]
             ],
@@ -152,10 +150,9 @@ var DashboardModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_4__components_linkos_about_company_about_company_component__["a" /* AboutCompanyComponent */],
                 __WEBPACK_IMPORTED_MODULE_5__components_linkos_about_user_about_user_component__["a" /* AboutUserComponent */],
                 __WEBPACK_IMPORTED_MODULE_6__components_linkos_active_users_chat_active_users_chat_component__["a" /* ActiveUsersChatComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__components_linkos_company_news_company_news_component__["a" /* CompanyNewsComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__components_linkos_clock_clock_component__["a" /* ClockComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__components_linkos_calendar_calendar_component__["a" /* LinkosCalendarComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__components_linkos_task_task_component__["a" /* TaskComponent */]
+                __WEBPACK_IMPORTED_MODULE_8__components_linkos_company_news_company_news_component__["a" /* CompanyNewsComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__components_linkos_clock_clock_component__["a" /* ClockComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__components_linkos_task_task_component__["a" /* TaskComponent */]
             ]
         })
     ], DashboardModule);

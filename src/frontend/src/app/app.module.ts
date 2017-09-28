@@ -1,9 +1,10 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { EventsService } from './services/events.service';
+import { LinkosCalendarModule } from './views/linkos-calendar/calendar.module';
 
 // Import containers
 import {
@@ -62,17 +63,18 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
 
 @NgModule({
   imports: [
-    BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    LinkosCalendarModule,
   ],
   declarations: [
     AppComponent,
     ...APP_CONTAINERS,
     ...APP_COMPONENTS,
-    ...APP_DIRECTIVES
+    ...APP_DIRECTIVES,
   ],
   providers: [ EventsService, {
     provide: LocationStrategy,

@@ -9,7 +9,6 @@ export * from './app-sidebar-header';
 export * from './linkos-about-company';
 export * from './linkos-about-user';
 export * from './linkos-active-users-chat';
-export * from './linkos-calendar';
 export * from './linkos-clock';
 export * from './linkos-company-news';
 export * from './linkos-task';
