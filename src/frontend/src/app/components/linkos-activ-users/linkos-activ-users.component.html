@@ -1,0 +1,13 @@
+<div class="card">
+    <div class="card-header">Active Users</div>
+    <div class="card-body" *ngFor="let user of data.data">
+      <div class="user">
+        <h6>{{user.title}}</h6>
+        <p>{{user.funkcija}}</p>
+      </div>
+      <div class="opcije">
+        <a href="#"><i class="fa fa-commenting-o" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+      </div>
+    </div>
+</div>

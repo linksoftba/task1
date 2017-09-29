@@ -1,0 +1,66 @@
+<div class="card">
+    <div class="card-header">About User</div>
+    <div class="card-body text-center">
+      <img src={{imgPath}} class="img-responsive">
+      <h5 class="card-title">{{name}}</h5>
+      <p>{{function}}</p>
+      
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#settings">
+        <i class="fa fa-cog" aria-hidden="true"></i>
+      </button>
+      
+      <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#profileview">
+        <i class="fa fa-user" aria-hidden="true"></i>
+      </button>
+    </div>
+</div>
+    <div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Profile Settings</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Name:</p><input type="text" #newname class="form-control" value="{{name}}">
+              <p>Profile Image Url:</p><input type="text" #profileimg class="form-control" value="{{imgPath}}">
+              <p>Working Place:</p><input type="text" #workplace class="form-control" value="{{function}}">
+              <p>Email:</p><input type="text" #newemail class="form-control" value="{{email}}">
+              <p>Telephone Number</p><input type="text" #newtelephone class="form-control" value="{{telephone}}">
+              <p>Skype:</p><input type="text" #newskype class="form-control" value="{{skype}}">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="changeDetails(newname.value, profileimg.value, workplace.value, newemail.value, newtelephone.value, newskype.value)">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="profileview" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Your Profile</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src={{imgPath}} class="img-responsive">
+              <h4 class="text-center">{{name}}</h4>
+              <p>Working Place: {{function}}</p>
+              <p>Email: {{email}}</p>
+              <p>Telephone number: {{telephone}}</p>
+              <p>Skype: {{skype}}</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+   

@@ -1,6 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { CalendarModule } from 'angular-calendar';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import { DemoUtilsModule } from './components/linkos-calendar/demo-utils/module';
+
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import {  HttpModule } from '@angular/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 
@@ -65,13 +74,20 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     AppRoutingModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    BrowserAnimationsModule,
+    HttpModule,
+    CalendarModule.forRoot(),
+    CommonModule,
+    FormsModule,
+    NgbModalModule.forRoot(),
+    DemoUtilsModule
   ],
   declarations: [
     AppComponent,
     ...APP_CONTAINERS,
     ...APP_COMPONENTS,
-    ...APP_DIRECTIVES
+    ...APP_DIRECTIVES,
   ],
   providers: [{
     provide: LocationStrategy,
