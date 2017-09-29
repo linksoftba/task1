@@ -1663,10 +1663,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+//service made to comunicate with backend
 var EventsService = /** @class */ (function () {
     function EventsService(http) {
         this.http = http;
     }
+    //method that gona make request on backend route that retrives data from database
     EventsService.prototype.requestEvents = function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
         headers.append('Content-Type', 'application/json');
@@ -1785,6 +1787,8 @@ var LinkosCalendarComponent = /** @class */ (function () {
         this.weekendDays = [__WEBPACK_IMPORTED_MODULE_2_angular_calendar__["b" /* DAYS_OF_WEEK */].FRIDAY, __WEBPACK_IMPORTED_MODULE_2_angular_calendar__["b" /* DAYS_OF_WEEK */].SATURDAY];
         this.activeDayIsOpen = false;
     }
+    //on init load events from our service that gona make GET request to backend
+    //and set that data into Calendar's class so it displays them
     LinkosCalendarComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.eventsService.requestEvents().subscribe(function (res) {
@@ -1801,6 +1805,7 @@ var LinkosCalendarComponent = /** @class */ (function () {
             }
         });
     };
+    //toggles events in calendar
     LinkosCalendarComponent.prototype.dayClicked = function (_a) {
         var date = _a.date, events = _a.events;
         if (Object(__WEBPACK_IMPORTED_MODULE_3_date_fns__["isSameMonth"])(date, this.viewDate)) {
@@ -1813,13 +1818,6 @@ var LinkosCalendarComponent = /** @class */ (function () {
                 this.viewDate = date;
             }
         }
-    };
-    LinkosCalendarComponent.prototype.getEvents = function () {
-        var _this = this;
-        this.eventsService.requestEvents().subscribe(function (res) {
-            _this.events = res.data;
-            alert(JSON.stringify(_this.events));
-        });
     };
     LinkosCalendarComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({

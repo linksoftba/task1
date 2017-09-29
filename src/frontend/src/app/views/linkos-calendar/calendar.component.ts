@@ -35,6 +35,8 @@ export class LinkosCalendarComponent implements OnInit {
 
   constructor(private eventsService: EventsService) { }
 
+  //on init load events from our service that gona make GET request to backend
+  //and set that data into Calendar's class so it displays them
   ngOnInit() {
     this.eventsService.requestEvents().subscribe(res => {
       for(let i=0; i<res.data.length; i++) {
@@ -52,7 +54,7 @@ export class LinkosCalendarComponent implements OnInit {
     });
   }
 
- 
+ //toggles events in calendar
   dayClicked({
     date,
     events
@@ -74,10 +76,11 @@ export class LinkosCalendarComponent implements OnInit {
   }
 
 
-  getEvents() {
-    this.eventsService.requestEvents().subscribe(res => {
-      this.events = res.data;
-      alert(JSON.stringify(this.events));
-    });
-  }
+  //just in case its needed to see what we are getting from our service
+  //getEvents() {
+  // this.eventsService.requestEvents().subscribe(res => {
+  //    this.events = res.data;
+  //    alert(JSON.stringify(this.events));
+  //  });
+  //}
 }

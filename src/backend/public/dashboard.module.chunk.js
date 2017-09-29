@@ -50,7 +50,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".wrapper {\r\n    width:100%;;\r\n    height: 100%;\r\n}\r\n\r\n.col {\r\n    height: inherit;\r\n    padding-left: 0.5%;\r\n    padding-right: 0.5%;\r\n}", ""]);
+exports.push([module.i, ".wrapper {\r\n    width:100%;;\r\n    height: 100%;\r\n}\r\n\r\n.col {\r\n    height: inherit;\r\n    padding-left: 0.3%;\r\n    padding-right: 0.3%;\r\n}", ""]);
 
 // exports
 
@@ -63,7 +63,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/views/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"animated fadeIn wrapper\">\r\n  <div class=\"col-md-3 col\">\r\n    <about-company></about-company>\r\n    <about-user></about-user>\r\n    <active-users-chat></active-users-chat>\r\n  </div>\r\n  <div class=\"col-md-6 col\">\r\n    <company-news></company-news>\r\n  </div>\r\n  <div class=\"col-md-3 col\">\r\n    <clock></clock>\r\n    <task></task>\r\n  </div>\r\n\r\n</div>"
+module.exports = "<div class=\"animated fadeIn wrapper\">\r\n  <div class=\"col-lg-3 col-md-3 col-sm-12 col-md-12 col\">\r\n    <about-company></about-company>\r\n    <about-user></about-user>\r\n    <active-users-chat></active-users-chat>\r\n  </div>\r\n  <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12 col\">\r\n    <company-news></company-news>\r\n  </div>\r\n  <div class=\"col-lg-3 col-md-3 col-sm-12 col-xs-12 col\">\r\n    <clock></clock>\r\n    <task></task>\r\n  </div>\r\n\r\n</div>"
 
 /***/ }),
 
