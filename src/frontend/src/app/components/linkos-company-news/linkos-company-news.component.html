@@ -1,0 +1,51 @@
+<div class=" card-top">
+    <div class="card-header text-center">
+      Company News
+    </div>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Add News
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add News</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group">
+                    <input type="text" #newstitle class="form-control" placeholder="Title" aria-label="Title" aria-describedby="basic-addon2">
+                    
+                  </div>
+                  <div class="input-group">
+                      <input type="text" #newsmessage class="form-control" placeholder="Message" aria-label="Message" aria-describedby="basic-addon2">
+                      
+                  </div>
+                  <input type="checkbox" name="vehicle" #importantNews value="Bike"> Is this important?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="addNews(newstitle.value , newsmessage.value, importantNews.checked)">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="card-body">
+        <div class="card text-center" *ngFor="let news of newsList">
+            <div class="card-header news-card-header" [ngClass]="{'important-news': news.important}" >
+              
+            </div>
+            <div class="card-body news-card-body">
+              <h4 class="card-title">{{news.title}}</h4>
+              <p class="card-text">{{news.description}}</p>
+            </div>
+            <div class="card-footer text-muted">
+              {{news.time | date:"dd/MM/yyyy HH:mm"}}
+            </div>
+          </div>
+    </div>
+  </div>

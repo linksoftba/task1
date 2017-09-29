@@ -1,0 +1,31 @@
+img {
+    width: 90%
+}
+
+.card {
+    margin: 0;
+}
+
+.card-body {
+    padding: 6px 6px 6px 20px;
+}
+
+h5 {
+    margin: 15px 0 0 0;
+}
+
+i {
+    font-size: 130%;
+    padding: 0 10px 0 10px;
+}
+.btn{
+    padding: 0;
+    background: #fff;
+    color: #00abdb;
+    border: 0;
+    font-size: 130%;
+}
+
+.settings p {
+    display: inline-block;
+}
